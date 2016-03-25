@@ -66,6 +66,22 @@ void hello()
 {
   if(keys[2] && keys[1])
   {
-    
+    println("hello cruel world");
+  }
+}
+
+void hello2()
+{
+  if(keys[2] && keys[1])
+  {
+    println("hello new world");
+  }
+}
+
+void hello3()
+{
+  if(keys[2] && keys[1])
+  {
+    println("hello smooth world");
   }
 }
