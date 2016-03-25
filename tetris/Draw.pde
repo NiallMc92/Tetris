@@ -59,3 +59,13 @@ void keyReleased()
     keys[2] = false;
   }
 }
+
+// hello hello hello hello
+
+void hello()
+{
+  if(keys[2] && keys[1])
+  {
+    
+  }
+}
