@@ -9,6 +9,7 @@ class Bricks
     PVector forward;
     PVector fall;
     float theta;
+    PImage s;
     
     Bricks(float x, float y)
     {
@@ -20,6 +21,7 @@ class Bricks
       forward = new PVector(0, 1);
       fall = new PVector(0, 50);
       theta = 0;
+      s = loadImage("brick1.png");
     }
     
     void render()
@@ -29,11 +31,7 @@ class Bricks
       pushMatrix();
       translate(pos.x, pos.y);
       rotate(theta);
-      rect(x1, y1, w, h);
-      //rect(x1, y1 - 40, w, h);
-      //rect(x1, y1 - 20, w, h);
-      //rect(x1, y1 + 20, w, h);
-      //rect(x1, y1 + 40, w, h);
+      image(s, x1, y1, w, h);
       popMatrix();
     }
     
