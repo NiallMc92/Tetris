@@ -1,4 +1,4 @@
-class Bricks 
+/*class Bricks 
 {
   
     float x1;
@@ -11,7 +11,7 @@ class Bricks
     float theta;
     PImage brick1;
     PImage brick2;
-    boolean brick1Move;
+    boolean brickMove;
     
     Bricks(float x, float y)
     {
@@ -23,7 +23,7 @@ class Bricks
       theta = 0;
       brick1 = loadImage("brick1.png");
       brick2 = loadImage("brick2.png");
-      brick1Move = true;
+      brickMove = true;
     }
     
     void render()
@@ -35,4 +35,4 @@ class Bricks
     {      
       
     }
-}
+}*/

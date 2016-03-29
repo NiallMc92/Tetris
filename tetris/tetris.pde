@@ -1,4 +1,4 @@
-ArrayList<Bricks>bricks = new ArrayList<Bricks>();
+/*ArrayList<Bricks>bricks = new ArrayList<Bricks>();
 boolean keys[] = new boolean [2000];
 
 void settings()
@@ -17,9 +17,19 @@ void draw ()
   grid();
   
   bricks.get(0). render();
-  if(bricks.get(0).brick1Move)
+  if(bricks.get(0).brickMove)
   {
     bricks.get(0). update();
+  }
+  
+  if(bricks.get(0).pos.y + bricks.get(0).h >= height)
+  {
+    bricks.add(new Brick2(240, -150));
+    bricks.get(1).render();
+    if(bricks.get(1).brickMove)
+    {
+      bricks.get(1). update();
+    } 
   }
 }
 
@@ -67,4 +77,4 @@ void keyReleased()
   {
     keys[3] = false;
   }
-}
+}*/

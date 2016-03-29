@@ -1,6 +1,6 @@
-/*class Brick1 extends Bricks
+/*class Brick2 extends Bricks
 {
-    Brick1(float x, float y)
+    Brick2(float x, float y)
     {
       super(x, y);
       brickMove = true;
@@ -8,14 +8,14 @@
     
     void render()
     {
-      w = 20;
-      h = 100;
+      w = 40;
+      h = 40;
       fill(0);
       stroke(0);
       pushMatrix();
       translate(pos.x, pos.y);
       rotate(theta);
-      image(brick1, x1, y1, w, h);
+      image(brick2, x1, y1, w, h);
       popMatrix();
     }
     

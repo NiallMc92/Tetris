@@ -1,4 +1,4 @@
-void grid()
+/*void grid()
 {
   float x1 = 0; 
   float y1 = 0;
@@ -20,4 +20,4 @@ void grid()
     x3 += 20;
     x4 += 20;
   }
-}
+}*/
