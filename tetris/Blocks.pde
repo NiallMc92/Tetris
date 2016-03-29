@@ -9,35 +9,50 @@ class Bricks
     PVector forward;
     PVector fall;
     float theta;
-    PImage s;
+    PImage brick1;
+    PImage brick2;
     
     Bricks(float x, float y)
     {
       x1 = 0;
       y1 = 0;
-      w = 20;
-      h = 100;
       pos = new PVector (x, y);
       forward = new PVector(0, 1);
       fall = new PVector(0, 50);
       theta = 0;
-      s = loadImage("brick1.png");
+      brick1 = loadImage("brick1.png");
+      brick2 = loadImage("brick2.png");
     }
     
-    void render()
+    void renderBrick1()
     {
+      w = 20;
+      h = 100;
       fill(0);
       stroke(0);
       pushMatrix();
       translate(pos.x, pos.y);
       rotate(theta);
-      image(s, x1, y1, w, h);
+      image(brick1, x1, y1, w, h);
+      popMatrix();
+    }
+    
+    void renderBrick2()
+    {
+      w = 40;
+      h = 40;
+      fill(0);
+      stroke(0);
+      pushMatrix();
+      translate(pos.x, pos.y);
+      rotate(theta);
+      image(brick2, x1, y1, w, h);
       popMatrix();
     }
     
     void update()
     {      
-      if(pos.y >= 0)
+      if(pos.y >= -150)
       {
         pos.add(forward);
       }
@@ -51,13 +66,18 @@ class Bricks
       }
       if(keys[0])
       {
-        theta -= radians(90);
+        pos.x -= 20;
         keys[0] = false;
       }
       if(keys[1])
       {
-        theta += radians(90);
+        pos.x += 20;
         keys[1] = false;
+      }
+      if(keys[3])
+      {
+        theta += radians(90);
+        keys[3] = false;
       }
       if(keys[2] && pos.y < height)
       {

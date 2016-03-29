@@ -8,7 +8,7 @@ void settings()
 
 void setup ()
 {
-  bricks.add(new Bricks(240, 0));
+  bricks.add(new Bricks(240, -150));
 }
 
 void draw ()
@@ -18,10 +18,16 @@ void draw ()
   
   for(int i = 0 ; i < bricks.size() ; i ++)
   {
-    Bricks b = bricks.get(i);
-    bricks.get(i). render();
-    bricks.get(i). update();
+    bricks.get(0). renderBrick1();
+    bricks.get(0). update();
   }
+  
+  if(bricks.get(0).pos.y + bricks.get(0).h >= height)
+    {
+        bricks.add(new Bricks(240, -60));
+        bricks.get(1).renderBrick2();
+        bricks.get(1). update();
+    }
 }
 
 void keyPressed()
@@ -39,6 +45,11 @@ void keyPressed()
   if(key == 's')
   {
     keys[2] = true;
+  }
+  
+  if(key == ' ')
+  {
+    keys[3] = true;
   }
 }
 
@@ -58,30 +69,9 @@ void keyReleased()
   {
     keys[2] = false;
   }
-}
-
-// hello hello hello hello
-
-void hello()
-{
-  if(keys[2] && keys[1])
+  
+  if(key == ' ')
   {
-    println("hello cruel world");
-  }
-}
-
-void hello2()
-{
-  if(keys[2] && keys[1])
-  {
-    println("hello new world");
-  }
-}
-
-void hello3()
-{
-  if(keys[2] && keys[1])
-  {
-    println("hello smooth world");
+    keys[3] = false;
   }
 }
