@@ -1,4 +1,4 @@
-class Bricks 
+class Brick1 
 {
   
     float x1;
@@ -11,8 +11,9 @@ class Bricks
     float theta;
     PImage brick1;
     PImage brick2;
+    boolean brick1Move;
     
-    Bricks(float x, float y)
+    Brick1(float x, float y)
     {
       x1 = 0;
       y1 = 0;
@@ -22,6 +23,7 @@ class Bricks
       theta = 0;
       brick1 = loadImage("brick1.png");
       brick2 = loadImage("brick2.png");
+      brick1Move = true;
     }
     
     void renderBrick1()
@@ -56,14 +58,6 @@ class Bricks
       {
         pos.add(forward);
       }
-      if(pos.y + h >= height)
-      {
-        pos.y = height - h;
-      }
-      if(pos.x + w >= height)
-      {
-        pos.x = height - w;
-      }
       if(keys[0])
       {
         pos.x -= 20;
@@ -84,9 +78,15 @@ class Bricks
         pos.add(fall);
         keys[2] = false;
       }
-      if(pos.y + h > height)
+      if(pos.y + h >= height)
       {
         pos.y = height - h;
+        brick1Move = false;
+      }
+      if(pos.x + w >= height)
+      {
+        pos.x = height - w;
+        brick1Move = false;
       }
       println("" + theta);
     }

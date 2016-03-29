@@ -1,4 +1,4 @@
-ArrayList<Bricks>bricks = new ArrayList<Bricks>();
+ArrayList<Brick1>brick1 = new ArrayList<Brick1>();
 boolean keys[] = new boolean [2000];
 
 void settings()
@@ -8,7 +8,7 @@ void settings()
 
 void setup ()
 {
-  bricks.add(new Bricks(240, -150));
+  brick1.add(new Brick1(240, -150));
 }
 
 void draw ()
@@ -16,18 +16,11 @@ void draw ()
   background(255);
   grid();
   
-  for(int i = 0 ; i < bricks.size() ; i ++)
+  brick1.get(0). renderBrick1();
+  if(brick1.get(0).brick1Move)
   {
-    bricks.get(0). renderBrick1();
-    bricks.get(0). update();
+    brick1.get(0). update();
   }
-  
-  if(bricks.get(0).pos.y + bricks.get(0).h >= height)
-    {
-        bricks.add(new Bricks(240, -60));
-        bricks.get(1).renderBrick2();
-        bricks.get(1). update();
-    }
 }
 
 void keyPressed()
