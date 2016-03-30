@@ -30,8 +30,6 @@ class Piece
  
   void display(Boolean still) 
   {
-    stroke(250);
-    fill(c);
     pushMatrix();
     if (!still) 
     {
@@ -41,6 +39,8 @@ class Piece
     int rot = still ? 0 : r;
     for (int i = 0; i < 4; i++) 
     {
+      stroke(250, 50);
+      fill(c);
       image(brick1,pos[rot][i][0] * q, pos[rot][i][1] * q, 20, 20);
     }
     popMatrix();
