@@ -28,8 +28,7 @@ void settings()
 
 void draw()
 {
-  background(60);
- 
+  background(25, 150, 25);
   if(grid != null){
     grid.drawGrid();
     int now = millis();
@@ -71,7 +70,6 @@ void initialize() {
 }
 
 void goToNextPiece() {
-  //println("-- - nextPiece - - --");
   piece = new Piece(nextPiece.kind);
   nextPiece = new Piece(-1);
   r = 0;

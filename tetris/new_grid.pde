@@ -22,7 +22,6 @@ class Grid
     {
       return true;
     }
-    //println("WARNING: trying to access out of bond cell, x: "+x+" y: "+y);
     return false;
   }
  
@@ -136,7 +135,7 @@ class Grid
  
   void drawGrid() 
   {
-    stroke(120);
+    stroke(0);
     pushMatrix();
     translate(160, 40);
     for (int i = 0; i <= w; i ++) 
@@ -148,7 +147,7 @@ class Grid
       line(0, j*q, w*q, j*q);
     }
  
-    stroke(80);
+    stroke(0);
     for (int i = 0; i < w; i ++)
     {
       for (int j = 0; j < h; j ++) 
