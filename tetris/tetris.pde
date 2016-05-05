@@ -1,29 +1,28 @@
-//ArrayList<Bricks>bricks = new ArrayList<Bricks>();
 boolean keys[] = new boolean [2000];
 
-int w = 10;
-int h = 20;
+int w = 10; // width
+int h = 20; // height
 int q = 20;//blocks width and height
 int dt;// delay between each move
-int currentTime;
-Grid grid;
-Piece piece;
-Piece nextPiece;
-Pieces pieces;
-Score score;
+int currentTime; // game time
+Grid grid; // grid function in grid class
+Piece piece; // piece function in piececlass
+Piece nextPiece; // next piece function in piece class
+Pieces pieces; // pieces function in piece class
+Score score; // score function in score class
 int r = 0;//rotation status, from 0 to 3
-int level = 1;
-int nbLines = 0;
+int level = 1; // game level
+int nbLines = 0; // rows of blocks on grid
  
-int txtSize = 20;
-int textColor = color(34, 230, 190);
+int txtSize = 20; // size of the text
+int textColor = color(34, 230, 190); // color of the text
  
-Boolean gameOver = false;
-Boolean gameOn = false;
+Boolean gameOver = false; // ganeover is false
+Boolean gameOn = false; // game is active is false
 
 void settings()
 {
-  size(500, 500, P2D);
+  size(500, 500, P2D); // screen size
 }
 
 void draw()
