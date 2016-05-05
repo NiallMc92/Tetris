@@ -7,4 +7,4 @@ GamePlay video:
 
 Switch Statement Tutorial:
 
-[![IMAGE ALT TEXT HERE](http://www.cs.uah.edu/~rcoleman/CS121/ClassTopics/Images/Conditionals09.jpg)](https://www.youtube.com/watch?v=cDUHLQXfJHc&feature=youtu.be)
+[![IMAGE ALT TEXT HERE](https://raw.githubusercontent.com/NiallMc92/Tetris/master/switchStatement.PNG)](https://www.youtube.com/watch?v=cDUHLQXfJHc&feature=youtu.be)
