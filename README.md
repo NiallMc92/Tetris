@@ -3,7 +3,7 @@ Tetris made in processing
 
 GamePlay video:
 
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/i/IzcNrvXf9sS-AAfIpP8Osw/mq1.jpg?v=bcbfc8)](https://www.youtube.com/watch?v=DCZV4p4gF8Y&feature=youtu.be)
+[![IMAGE ALT TEXT HERE](https://raw.githubusercontent.com/NiallMc92/Tetris/master/tetrisGameplay.PNG)](https://www.youtube.com/watch?v=DCZV4p4gF8Y&feature=youtu.be)
 
 Switch Statement Tutorial:
 
