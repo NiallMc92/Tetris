@@ -15,7 +15,10 @@ int level = 1; // game level
 int nbLines = 0; // rows of blocks on grid
  
 int txtSize = 20; // size of the text
-int textColor = color(34, 230, 190); // color of the text
+int textColor1 = color(34, 230, 190); // color of the text
+int textColor2 = color(200, 50, 100); // color of the text
+int textColor3 = color(150, 30, 300); // color of the text
+int textColor4 = color(255, 243, 300); // color of the text
  
 Boolean gameOver = false; // ganeover is false
 Boolean gameOn = false; // game is active is false
@@ -44,15 +47,23 @@ void draw()
     noStroke();
     fill(255, 60);
     rect(110, 195, 240, 2*txtSize, 3);
-    fill(textColor);
+    fill(textColor1);
     text("Game Over", 120, 220);
   }
   if (!gameOn) {
     noStroke();
     fill(255, 60);
-    rect(110, 250, 255, 2*txtSize, 3);
-    fill(textColor);
+    rect(110, 260, 255, 7*txtSize, 3);
+    fill(textColor1);
     text("press 'p' to start playing!", 120, 280);
+    fill(textColor2);
+    text("left arrow key to move block left", 120, 300);
+    text("right arrow key to move block right", 120, 320);
+    text("down arrow key to move block down", 120, 340);
+    fill(textColor4);
+    text("up key to rotate the block", 120, 360);
+    fill(textColor3);
+    text("shift key to move block to the bottom", 120, 380);
   }
 }
 

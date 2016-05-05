@@ -1,4 +1,4 @@
-class Score 
+class Score // player's points
 {
   int points = 0;
  
@@ -30,19 +30,19 @@ class Score
     translate(40, 60);
  
     //score
-    fill(textColor);
+    fill(textColor4);
     text("score: ", 0, 0);
     fill(230, 230, 12);
     text(""+formatPoint(points), 0, txtSize);
  
     //level
-    fill(textColor);
+    fill(textColor1);
     text("level: ", 0, 3*txtSize);
     fill(230, 230, 12);
     text("" + level, 0, 4*txtSize);
      
     //lines
-    fill(textColor);
+    fill(textColor4);
     text("lines: ", 0, 6*txtSize);
     fill(230, 230, 12);
     text("" + nbLines, 0, 7*txtSize);
@@ -53,7 +53,7 @@ class Score
     translate(400, 60);
  
     //score
-    fill(textColor);
+    fill(textColor4);
     text("next: ", 0, 0);
  
     translate(1.2*q, 1.5*q);

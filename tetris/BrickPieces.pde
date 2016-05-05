@@ -1,4 +1,4 @@
-class Pieces 
+class Pieces // position of the blocks on the grid
 {
   int[][][][] pos = new int [7][4][4][2];
  

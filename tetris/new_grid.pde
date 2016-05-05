@@ -1,4 +1,4 @@
-class Grid 
+class Grid // the grid that the blocks move on
 {
   int [][] cells = new int[w][h];
  
